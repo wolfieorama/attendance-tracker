@@ -1,0 +1,2 @@
+class TeamLeader < User
+end
