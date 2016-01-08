@@ -1,4 +1,7 @@
 class User < ActiveRecord::Base
+
+  scope :agent, -> { where(type: "Agent") }
+  scope :team_leader, -> { where(type: "TeamLeader") }
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -10,5 +13,9 @@ class User < ActiveRecord::Base
 
   def self.types
     %w(Agent TeamLeader)
+  end
+
+  def admin?
+    type == "TeamLeader"
   end
 end
