@@ -27,9 +27,13 @@ gem 'activeadmin', '~> 1.0.0.pre2'
 
 gem 'devise'
 
+#to paginate
 gem 'will_paginate', '~> 3.1'
 
+#to paginate with bootstrap
 gem 'will_paginate-bootstrap', '~> 1.0', '>= 1.0.1'
+#to search 
+gem 'ransack', '~> 1.7'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
