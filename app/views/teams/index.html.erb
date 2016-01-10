@@ -25,3 +25,5 @@
 <br>
 
 <%= link_to 'New Team', new_team_path %>
+
+<%= will_paginate @teams, renderer: BootstrapPagination::Rails %>
