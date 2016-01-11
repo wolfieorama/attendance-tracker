@@ -4,6 +4,12 @@ Using active admin to manage attendance tracker backend
 
 coocon for forms as well :)
 
+UJS for button animation
+
+pagination with will_paginate
+
+search with ransack 
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
