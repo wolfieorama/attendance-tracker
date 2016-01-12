@@ -13,10 +13,8 @@ class ApplicationController < ActionController::Base
   def after_sign_in_path_for(user)
     if user.type == "TeamLeader"
       teams_url
-    elsif user.type == "Agent"
-      attendances_url
     else
-      root
+      attendances_url
     end
   end
 end

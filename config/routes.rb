@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  devise_for :users
-  devise_for :team_leaders
-  devise_for :agents
+  devise_for :users, :controllers => { :sessions => 'sessions' }
+  devise_for :team_leaders, :skip => :sessions
+  devise_for :agents, :skip => :sessions
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
