@@ -14,6 +14,7 @@ class User < ActiveRecord::Base
   end
 
   def admin?
-    :type == "TeamLeader"
+    current_user && type == "TeamLeader"
   end
+
 end

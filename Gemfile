@@ -32,8 +32,8 @@ gem 'will_paginate', '~> 3.1'
 
 #to paginate with bootstrap
 gem 'will_paginate-bootstrap', '~> 1.0', '>= 1.0.1'
-#to search 
-gem 'ransack', '~> 1.7'
+#to search thro stuff
+gem 'ransack', '~> 1.7', branch: 'rails-4.2'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

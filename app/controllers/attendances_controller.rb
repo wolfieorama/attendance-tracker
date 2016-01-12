@@ -1,10 +1,13 @@
 class AttendancesController < ApplicationController
   before_action :set_attendance, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
+
 
   # GET /attendances
   # GET /attendances.json
   def index
-    @attendances = Attendance.all
+    @q = Attendance.search(params[:q])
+    @attendances = @q.result
   end
 
   # GET /attendances/1
