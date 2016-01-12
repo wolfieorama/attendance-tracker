@@ -9,8 +9,7 @@ class User < ActiveRecord::Base
 
   self.inheritance_column = :type
 
-  def admin?
-    type == "TeamLeader"
+  def self.types
+    %w(Agent TeamLeader)
   end
-
 end
