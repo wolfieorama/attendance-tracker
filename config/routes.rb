@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users
-  devise_for :agents
   devise_for :team_leaders
+  devise_for :agents
+
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
-  # resources :users
   resources :teams
   resources :attendances
   # The priority is based upon order of creation: first created -> highest priority.

@@ -9,20 +9,23 @@
 <body>
     <div>
       <%= link_to "STI", root_path %>
-      <% if agent_signed_in? || team_leader_signed_in? %>
-        <ul>
-          <li><%= link_to "Account", edit_user_registration_path %></li>
-          <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
-      <% end %>
-      <% if current_team_leader %>
-          <li><%= link_to "I am admin" %></li>
-        </ul>
-      <% else %>
-        <ul>
-          <li><%= link_to "Sign up",  new_user_registration_path %></li>
-          <li><%= link_to "Sign in",  new_user_session_path %></li>
-        </ul>
-      <% end %>
+
+
+    <% if user_signed_in? %>
+      <li><%= link_to "Account", edit_user_registration_path %></li>
+      <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+    <% elsif team_leader_signed_in? %>
+      <li><%= link_to "I am Admin" %></li>
+      <li><%= link_to "Account", edit_user_registration_path %></li>
+      <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+    <% elsif agent_signed_in? %>
+      <li><%= link_to "Account", edit_user_registration_path %></li>
+      <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+      <li><%= link_to "I am Agent" %></li>
+    <% else %>
+      <li><%= link_to "Sign in",  new_user_session_path %></li>
+      <li><%= link_to "Sign up",  new_user_registration_path %></li>
+    <% end %>
     </div>
 
 <%= yield %>
