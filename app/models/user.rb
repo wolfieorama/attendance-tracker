@@ -12,9 +12,4 @@ class User < ActiveRecord::Base
   def self.types
     %w(Agent TeamLeader)
   end
-
-  def admin?
-    current_user && type == "TeamLeader"
-  end
-
 end
