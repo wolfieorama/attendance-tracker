@@ -10,6 +10,8 @@ pagination with will_paginate
 
 search with ransack 
 
+and devise custom sessions
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
