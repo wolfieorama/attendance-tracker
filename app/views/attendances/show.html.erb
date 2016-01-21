@@ -9,6 +9,10 @@
   <strong>Available:</strong>
   <%= @attendance.available %>
 </p>
+<p>
+  <strong>Grand Hours:</strong>
+  <%= @attendance.final_hours %>
+</p>
 
 <%= link_to 'Edit', edit_attendance_path(@attendance) %> |
 <%= link_to 'Back', attendances_path %>
