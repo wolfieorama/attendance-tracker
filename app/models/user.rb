@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   has_many :attendances
   belongs_to :team
+  has_many :incidents
 
   self.inheritance_column = :type
 

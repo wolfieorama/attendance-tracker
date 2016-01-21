@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :incidents
   devise_for :users, :controllers => { :sessions => 'sessions' }
   devise_for :team_leaders, :skip => :sessions
   devise_for :agents, :skip => :sessions
