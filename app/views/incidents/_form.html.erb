@@ -19,6 +19,14 @@
     <%= f.label :duration %><br>
     <%= f.number_field :duration %>
   </div>
+  <div class="field">
+    <%= f.label :user %><br>
+    <%= f.collection_select(:user_id, User.all, :id, :name) %>
+  </div>
+  <div class="field">
+    <%= f.label :Attendance %><br>
+    <%= f.collection_select(:attendance_id, Attendance.all, :id, :day) %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>
